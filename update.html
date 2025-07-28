@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Scroll Animation</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .scroll-container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .wrapper {
+            display: flex;
+            animation: scroll 10s linear infinite;
+        }
+
+        .wrapper img {
+            padding: 10px;
+            height: 400px;
+            width: 400px;
+            flex-shrink: 0;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
 </head>
+
 <body>
-    
+    <h1>Scroll Animation</h1>
+    <div class="scroll-container">
+        <div class="wrapper">
+            <img src="istockphoto-1208818333-612x612.jpg" alt="">
+            <img src="istockphoto-1368264124-612x612.jpg" alt="">
+            <img src="istockphoto-144275607-612x612.webp" alt="">
+            <img src="istockphoto-844226534-612x612.jpg" alt="">
+
+        
+            <img src="istockphoto-1208818333-612x612.jpg" alt="">
+            <img src="istockphoto-1368264124-612x612.jpg" alt="">
+            <img src="istockphoto-144275607-612x612.webp" alt="">
+            <img src="istockphoto-844226534-612x612.jpg" alt="">
+        </div>
+    </div>
 </body>
+
 </html>
