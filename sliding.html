@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Card Hover Effect</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #a10d0d 0%, #a10d0d 50%, #ffffff 50%, #ffffff 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card-container {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: width 0.5s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .card-container:hover {
+      width: 700px;
+    }
+
+    .product-image {
+      flex-shrink: 0;
+      width: 300px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.4s ease;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      transition: transform 0.4s ease;
+    }
+
+    .card-container:hover .product-image img {
+      transform: rotate(-10deg) scale(1.05);
+    }
+
+    .product-details {
+      flex-grow: 1;
+      height: 100%;
+      background: #a10d0d;
+      color: white;
+      padding: 30px;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card-container:hover .product-details {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .product-details h2 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .product-details span {
+      font-size: 14px;
+      color: #f0cfcf;
+    }
+
+    .product-details h3 {
+      margin: 20px 0 10px;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    .product-details p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .product-details h4 {
+      margin-top: 15px;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    .size {
+      display: flex;
+      gap: 10px;
+      margin: 10px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .size li {
+      background: #fff;
+      color: #a10d0d;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .size li:hover {
+      background: #333;
+      color: #fff;
+    }
+
+    .group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .group h2 {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    button {
+      background: #fff;
+      color: #a10d0d;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #333;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .card-container {
+        flex-direction: column;
+        width: 90% !important;
+        height: auto;
+      }
+
+      .product-details {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+
+      .card-container:hover .product-details {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-container">
+    <div class="product-image">
+       
+      <img src="NIKE+AIR+MAX+1.avif" alt="Nike Air Max" />
+    </div>
+    <div class="product-details">
+      <h2>Nike Air Max<br><span>Men's Shoe</span></h2>
+      <h3>Product Details</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ducimus iusto.</p>
+      <h4>Size</h4>
+      <ul class="size">
+        <li>36</li>
+        <li>38</li>
+        <li>40</li>
+        <li>42</li>
+        <li>44</li>
+      </ul>
+      <div class="group">
+        <h2>Price: Rs 5000</h2>
+        <button>Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

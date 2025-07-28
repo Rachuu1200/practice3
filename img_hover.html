@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <img src="pexels-pixabay-56866.jpg" alt="">
+        <img src="JI230816Cosmos220-6d9254f-edited-scaled.jpg" alt="">
+        <img src="bright-forget-me-nots-royalty-free-image-1677788394.avif" alt="">
+        <img src="Bachelor's_button,_Basket_flower,_Boutonniere_flower,_Cornflower_-_3.jpg" alt="">
+         <img src="photo-1530092285049-1c42085fd395.jpg" alt="">
+    </div>
+</body>
+<style>
+
+    .container{
+        display: flex;
+        flex-direction: row;
+         padding: 0;
+        margin: 0;
+        gap:10px;
+
+    }
+    img{
+        height: 400px;
+        width: 400px;
+        border-radius: 20px;
+    }
+    .container img{
+        filter: saturate(0%);
+        width: 5%;
+        border: 2px solid whitesmoke;
+        cursor: pointer;
+        transition: all ease 0.4s;
+      
+
+    }
+    .container img:hover{
+        filter: saturate(100%);
+        width: 15%;
+    }
+</style>
+
+</html>

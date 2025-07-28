@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hover Image Effect</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      background-color: white;
+      color: white;
+      margin: 0;
+    }
+
+    .image_container {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 10px;
+      border: 2px solid yellow;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+    }
+
+    .image_container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(rgb(201, 207, 201));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .image_container:hover img {
+      opacity: 0.5;
+      transform: scale(1.05);
+    }
+
+    .image_container:hover .image-overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="image_container">
+    <img src="premium_photo-1724188383401-8364579c258a.avif" alt="Image" />
+    <div class="image-overlay">
+      <h3>Hover Effect</h3>
+      <p>Hover effect with zoom, color overlay, and text animation</p>
+    </div>
+  </div>
+</body>
+</html>

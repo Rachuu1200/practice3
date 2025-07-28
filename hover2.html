@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, red 0%, rgb(173, 95, 95) 50%, white 50%, white 50%);
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            color:black;
+            height: 500px;
+            width: 400px;
+            min-width: 400px;
+            border: 2px solid rgb(250, 133, 133);
+            box-shadow: 5px 5px 10px rgb(236, 123, 123);
+            overflow: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+            aspect-ratio: 4 / 5;
+
+        }
+
+        .image_overly {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(253, 243, 243, 0.6);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+            color: rgb(0, 0, 0);
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            opacity: 0;
+            box-sizing: border-box;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateY(20px);
+            overflow: hidden;
+            padding: 20px;
+            gap: 10px;
+        }
+
+        .container img {
+            height: 100%;
+            width: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+            transition: opacity 0.5s ease, transform 0.5s ease
+        }
+
+
+        .btn {
+            display: flex;
+            flex-direction: column;
+
+
+        }
+
+        button:hover {
+            background-color: rgb(78, 18, 18);
+            color: white;
+        }
+
+        button {
+            height: 40px;
+            width: 80px;
+            background: rgb(221, 91, 91);
+
+            border: 2px solid rgb(224, 135, 135);
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .container:hover img {
+            opacity: 0.3;
+            transform: scale(1.05);
+        }
+        
+
+        .container:hover .image_overly {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+            }
+
+            .image_overly {
+                padding: 10px;
+            }
+
+            .image_overly p {
+                font-size: 0.9rem;
+            }
+
+            .btn button {
+                width: 100%;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="NIKE+AIR+MAX+1.avif" alt="Nike Air Max 1 Men's Shoe">
+        <div class="image_overly">
+            <h3>Nike Air Max<br>Men's shoe</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam neque molestiae excepturi culpa iusto
+                suscipit cupiditate repudiandae sapiente libero praesentium? Aliquid, facilis? Distinctio vero mollitia
+                earum! Exercitationem et inventore voluptatibus!</p>
+            <div class="btn">
+                <div>Rs 6000</div>
+
+                <button>Buy Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

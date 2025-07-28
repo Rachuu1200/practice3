@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+        gap: 10px;
+        background-color: brown;
+        justify-content: center;
+        align-items: center;
+        
+
+
+    }
+
+    img {
+        height:400px ;
+        width: 300px;
+        border-radius: 10px;
+    }
+
+
+    .card {
+        transition: 0.5s ease;
+        cursor: pointer;
+    }
+    .container:hover > :not(:hover){
+        opacity: 0.3;
+    }
+    .card:hover{
+        transform: scale(1.1);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="card"><img src="7_of_clubs.png" alt=""></div>
+        <div class="card"><img src="7_of_clubs.png" alt=""></div>
+        <div class="card"><img src="7_of_clubs.png" alt=""></div>
+        <div class="card"><img src="7_of_clubs.png" alt=""></div>
+        <div class="card"><img src="7_of_clubs.png" alt=""></div>
+        <div class="card"><img src="7_of_clubs.png" alt=""></div>
+      
+    </div>
+</body>
+
+</html>

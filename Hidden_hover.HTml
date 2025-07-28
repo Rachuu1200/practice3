@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+
+
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            gap: 30px;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0px 2px 5px rgba(187, 183, 183, 0.5);
+
+        }
+
+        .container li {
+            display: flex;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+
+
+
+        }
+
+        li {
+            display: block;
+            padding: 10px 20px;
+        }
+
+        .container:hover :not(li:hover) {
+            opacity: .2;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <li>Home </li>
+            <li>About</li>
+            <li>Service</li>
+            <li>Contact</li>
+        </div>
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            gap: 10px;
+
+        }
+
+        .box1,
+        .box2,
+        .box3,
+        .box4,
+        .box5 {
+            height: 130px;
+            width: 80vw;
+            border: 2px solid black;
+
+        }
+
+        .box1 {
+            background-color: brown;
+            border: 2px solid black;
+            position: relative;
+            top:26px;
+            left:29px;
+            z-index: -1;
+
+        }
+
+        .box2 {
+            background-color: blueviolet;
+            position: absolute;
+        }
+
+        .box3 {
+            background-color: aqua;
+
+        }
+
+        .box4 {
+            background-color: black;
+
+        }
+
+        .box5 {
+            background-color: blue;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+        <div class="box5">box5</div>
+    </div>
+</body>
+
+</html>

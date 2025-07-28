@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <input type="text" id="demo" placeholder="Enter your name here" required>
+    <button id="btn">Click me</button>
+    </div>
+
+<style>
+    *{
+        margin:0;
+        padding: 0;
+    }
+    body{
+          min-height: 100vh;
+           display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+        width: 400px;
+        gap: 10px;
+    }
+    input{
+        height: 25px;
+    }
+    button{
+        height: 40px;
+        color: white;
+        background-color: rgb(129, 54, 54);
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    button:hover{
+        background-color: rgb(68, 90, 90);
+    }
+</style>
+
+<script>
+    const input= document.getElementById("demo");
+    const button= document.getElementById("btn");
+     
+    button.addEventListener("click",function(){
+        if(input.value.trim() !=="")
+    {
+        alert("Successful");
+    }
+    else{
+        alert("Please enter your name first")
+    }
+    });
+
+    input.addEventListener("keypress", function(event){
+        if(event.key=== "Enter"){
+            event.preventDefault();
+        button.click();
+        }
+    })
+</script>
+</body>
+
+</html>
